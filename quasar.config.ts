@@ -2,8 +2,10 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
 import { defineConfig } from '#q-app/wrappers';
+import { config as dotenvConfig } from 'dotenv';
 import { fileURLToPath } from 'node:url';
 
+dotenvConfig();
 export default defineConfig((ctx) => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
@@ -33,6 +35,10 @@ export default defineConfig((ctx) => {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
     build: {
+      publicPath: process.env.PUBLIC_PATH || './',
+      env: {
+        VITE_API_URL: process.env.VITE_API_URL || 'https://minsuibibes.com/api',
+      },
       target: {
         browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
         node: 'node20',
@@ -52,6 +58,7 @@ export default defineConfig((ctx) => {
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
       // publicPath: '/',
+
       // analyze: true,
       // env: {},
       // rawDefine: {}

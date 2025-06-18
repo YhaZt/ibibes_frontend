@@ -3,18 +3,46 @@
     <div class="q-mx-auto" style="max-width: 700px">
       <!-- Header and Logos (unchanged) -->
       <div class="row items-center q-col-gutter-sm q-mb-md q-px-sm q-pt-md q-pb-sm wrap">
-        <div class="row items-center q-gutter-sm col-12 col-md-auto justify-center justify-md-start">
-          <q-img loading="lazy" src="~assets/logos/dost.png" fit="contain" style="height: 50px; width: 50px" />
-          <q-img loading="lazy" src="~assets/logos/pcieerd.png" fit="contain" style="height: 50px; width: 50px" />
-          <q-img loading="lazy" src="~assets/logos/minsu.png" fit="contain" style="height: 50px; width: 50px" />
-          <q-img loading="lazy" src="~assets/logos/ibibes.png" fit="contain" style="height: 50px; width: 120px" class="mobile-only" />
+        <div
+          class="row items-center q-gutter-sm col-12 col-md-auto justify-center justify-md-start"
+        >
+          <q-img
+            loading="lazy"
+            src="~assets/logos/dost.png"
+            fit="contain"
+            style="height: 50px; width: 50px"
+          />
+          <q-img
+            loading="lazy"
+            src="~assets/logos/pcieerd.png"
+            fit="contain"
+            style="height: 50px; width: 50px"
+          />
+          <q-img
+            loading="lazy"
+            src="~assets/logos/minsu.png"
+            fit="contain"
+            style="height: 50px; width: 50px"
+          />
+          <q-img
+            loading="lazy"
+            src="~assets/logos/ibibes.png"
+            fit="contain"
+            style="height: 50px; width: 120px"
+            class="mobile-only"
+          />
         </div>
         <div class="col-12 col-md text-center q-mt-sm q-mt-md-none">
           <div class="text-h6">Mindoro State University</div>
           <div class="text-caption">Innovative Business Incubator for Biosystems Solutions</div>
         </div>
         <div class="q-mt-sm q-mt-md-none q-show-md q-show-lg q-show-xl mobile-hide">
-          <q-img loading="lazy" src="~assets/logos/ibibes.png" fit="contain" style="height: 50px; width: 120px" />
+          <q-img
+            loading="lazy"
+            src="~assets/logos/ibibes.png"
+            fit="contain"
+            style="height: 50px; width: 120px"
+          />
         </div>
       </div>
 
@@ -73,7 +101,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { api } from 'boot/axios'; // ✅ Use your configured Axios instance
+import { api } from 'src/boot/axios';
+
+console.log('API URL:', import.meta.env.VITE_API_URL);
 
 const route = useRoute();
 const router = useRouter();
@@ -89,7 +119,7 @@ const incubatee = ref({
   banner_program: '',
   client: '',
   description: '',
-  members: []
+  members: [],
 });
 
 const fetchIncubatee = async () => {
@@ -97,7 +127,7 @@ const fetchIncubatee = async () => {
     const res = await api.get(`/incubatee/${id}`); // ✅ No hardcoded domain
     incubatee.value = {
       ...res.data,
-      members: JSON.parse(res.data.members || '[]')
+      members: JSON.parse(res.data.members || '[]'),
     };
   } catch (error) {
     console.error('Failed to fetch incubatee:', error);
@@ -109,7 +139,6 @@ onMounted(() => {
   if (id) void fetchIncubatee();
 });
 </script>
-
 
 <style scoped>
 a {

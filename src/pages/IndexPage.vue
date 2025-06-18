@@ -57,7 +57,7 @@
       <q-card flat bordered class="q-mb-md">
         <q-card-section class="row q-col-gutter-md q-gutter-xs">
           <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm">
-            <q-img loading="lazy"  src="~assets/bio.png" fit="contain" class="q-mb-md" />
+            <q-img loading="lazy" src="~assets/bio.png" fit="contain" class="q-mb-md" />
           </q-card>
           <q-card
             clickable
@@ -82,7 +82,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/cream.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -133,7 +134,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/gold.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -175,7 +177,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/vana.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -217,7 +220,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/bilim.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -259,7 +263,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/cuni.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -310,7 +315,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/doro.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -352,7 +358,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/ala.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -394,7 +401,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/prom.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -436,7 +444,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/wander.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -478,7 +487,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/vic.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -529,7 +539,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/daloy.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -572,7 +583,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/upa.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -615,7 +627,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/iga.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -657,7 +670,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/aqua.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -699,7 +713,8 @@
                   class="flex flex-center"
                   style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.2)"
                 >
-                  <q-img loading="lazy"
+                  <q-img
+                    loading="lazy"
                     src="~assets/incubatee/cray.png"
                     fit="contain"
                     style="max-height: 100%; max-width: 100%"
@@ -728,8 +743,21 @@
 </template>
 
 <script setup lang="ts">
+import { api } from 'src/boot/axios'; // adjust path to your boot file
 import { useQuasar, QSpinnerFacebook } from 'quasar';
 import { useRouter } from 'vue-router';
+
+console.log('API URL:', import.meta.env.VITE_API_URL);
+
+// Test axios request right away or inside a function
+api
+  .get('/incubatee/6')
+  .then((res) => {
+    console.log('Incubatee data:', res.data);
+  })
+  .catch((err) => {
+    console.error('Error fetching incubatee:', err);
+  });
 
 const $q = useQuasar();
 const router = useRouter();
