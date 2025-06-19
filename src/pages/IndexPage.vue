@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-pa-md main-scale-container">
     <!-- Top Cards -->
     <div class="row justify-center q-gutter-md q-mb-md">
       <!-- Main Highlight Card -->
@@ -52,11 +52,10 @@
       </q-card>
     </div>
 
-    <div class="q-pt-lg">
+    <div class="q-pt-lg q-col-gutter-sm" >
       <!-- Card 1 -->
-      <q-card flat bordered class="q-mb-md">
-        <q-card-section class="row q-col-gutter-md q-gutter-xs">
-          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm">
+        <q-card-section class="row q-col-gutter-xs q-gutter-sm">
+          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm" style="width: 260px">
             <q-img loading="lazy" src="~assets/bio.png" fit="contain" class="q-mb-md" />
           </q-card>
           <q-card
@@ -72,10 +71,10 @@
                 style="flex: 0 0 30%; background-color: rgba(255, 255, 255, 0.1)"
               >
                 <div class="text-bold text-h4 text-md-h3 text-lg-h2">C.R.E.A.M.</div>
-                <q-separator class="my-1" />
                 <div class="text-subtitle2">
                   Coco Fiber Recycling for Eco-Friendly Alternative Materials
                 </div>
+                <q-separator class="my-1" />
               </div>
               <div class="row fit" style="flex: 1">
                 <div
@@ -106,12 +105,10 @@
             </div>
           </q-card>
         </q-card-section>
-      </q-card>
 
       <!-- Card 2 -->
-      <q-card flat bordered class="q-mb-md">
-        <q-card-section class="row q-col-gutter-md q-gutter-xs">
-          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm">
+        <q-card-section class="row q-col-gutter-xs q-gutter-sm">
+          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm" style="width: 260px">
             <q-img loading="lazy" src="~assets/inno.png" fit="contain" class="q-mb-md" />
           </q-card>
           <q-card
@@ -119,7 +116,7 @@
             v-ripple
             @click="goToIncubatee(9)"
             class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm cursor-pointer"
-            style="background: linear-gradient(90deg, #5de0e6, #004aad); min-height: 320px"
+            style="background: linear-gradient(90deg, #5de0e6, #004aad); min-height: 320px; "
           >
             <div class="column fit">
               <div
@@ -287,12 +284,10 @@
             </div>
           </q-card>
         </q-card-section>
-      </q-card>
 
       <!-- Card 3 -->
-      <q-card flat bordered class="q-mb-md">
-        <q-card-section class="row q-col-gutter-md q-gutter-xs">
-          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm">
+        <q-card-section class="row q-col-gutter-xs q-gutter-sm">
+          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm" style="width: 260px">
             <q-img loading="lazy" src="~assets/iot.png" fit="contain" class="q-mb-md" />
           </q-card>
           <q-card
@@ -511,12 +506,9 @@
             </div>
           </q-card>
         </q-card-section>
-      </q-card>
-
       <!-- Card 4 -->
-      <q-card flat bordered>
-        <q-card-section class="row q-col-gutter-md q-gutter-xs">
-          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm">
+        <q-card-section class="row q-col-gutter-xs q-gutter-sm">
+          <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm" style="width: 260px">
             <q-img loading="lazy" src="~assets/smart.png" fit="contain" class="q-mb-md" />
           </q-card>
           <q-card
@@ -737,7 +729,6 @@
             </div>
           </q-card>
         </q-card-section>
-      </q-card>
     </div>
   </div>
 </template>
@@ -778,3 +769,11 @@ const goToIncubatee = (id: number) => {
   }, 2000);
 };
 </script>
+<style>
+.main-scale-container {
+  transform: scale(.8);
+  transform-origin: top center;
+  width: 100; /* 100 / 0.85 to compensate for scaling */
+  margin: 0 auto;
+}
+</style>
