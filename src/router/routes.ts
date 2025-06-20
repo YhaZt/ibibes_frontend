@@ -4,7 +4,18 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [{ path: '', component: () => import('pages/IncubateeIndex.vue') }],
+  },
+    {
+    path: '/mentor',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/MentorIndex.vue') }],
+  },
+
+    {
+    path: '/mentorPage',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/Mentor/MentorProfile.vue') }],
   },
   {
     path: '/incubatee',

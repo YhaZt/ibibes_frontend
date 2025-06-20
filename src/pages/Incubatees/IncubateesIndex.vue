@@ -1,6 +1,13 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="q-mx-auto" style="max-width: 700px">
+    <div class="q-mx-auto relative-container" style="max-width: 700px">
+      <q-btn
+        class="back-btn"
+        color="deep-orange"
+        round
+        icon="arrow_back"
+        @click="$router.back()"
+      />
       <!-- Header and Logos (unchanged) -->
       <div class="row items-center q-col-gutter-sm q-mb-md q-px-sm q-pt-md q-pb-sm wrap">
         <div
@@ -103,7 +110,6 @@ import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { api } from 'src/boot/axios';
 
-console.log('API URL:', import.meta.env.VITE_API_URL);
 
 const route = useRoute();
 const router = useRouter();
@@ -141,8 +147,25 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.relative-container {
+  position: relative;
+}
+.back-btn {
+  position: absolute;
+  top: 9vh;
+  right: -1vw;
+  z-index: 10;
+  box-shadow: 0 2px 8px #0002;
+}
 a {
   color: #1e88e5;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .back-btn {
+    top: 18vh;
+    right: -2vw;
+  }
 }
 </style>

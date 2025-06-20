@@ -52,7 +52,7 @@
       </q-card>
     </div>
 
-    <div class="q-pt-lg q-col-gutter-sm" >
+    <div class="q-pt-lg q-col-gutter-sm">
       <!-- Card 1 -->
         <q-card-section class="row q-col-gutter-xs q-gutter-sm">
           <q-card class="col-12 col-sm-6 col-md-4 col-lg-2 q-mb-sm" style="width: 260px">
@@ -734,21 +734,11 @@
 </template>
 
 <script setup lang="ts">
-import { api } from 'src/boot/axios'; // adjust path to your boot file
 import { useQuasar, QSpinnerFacebook } from 'quasar';
 import { useRouter } from 'vue-router';
 
-console.log('API URL:', import.meta.env.VITE_API_URL);
 
-// Test axios request right away or inside a function
-api
-  .get('/incubatee/6')
-  .then((res) => {
-    console.log('Incubatee data:', res.data);
-  })
-  .catch((err) => {
-    console.error('Error fetching incubatee:', err);
-  });
+
 
 const $q = useQuasar();
 const router = useRouter();
@@ -769,11 +759,10 @@ const goToIncubatee = (id: number) => {
   }, 2000);
 };
 </script>
-<style>
+<style scoped>
 .main-scale-container {
-  transform: scale(.8);
-  transform-origin: top center;
-  width: 100; /* 100 / 0.85 to compensate for scaling */
+  width: 100%;
   margin: 0 auto;
+  /* Removed transform: scale to prevent extra scroll space */
 }
 </style>
