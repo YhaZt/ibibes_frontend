@@ -35,7 +35,7 @@ export default defineConfig((ctx) => {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
     build: {
-      publicPath: process.env.PUBLIC_PATH || './',
+      publicPath: './',
       env: {
         VITE_API_URL: process.env.VITE_API_URL || 'https://minsuibibes.com/api',
       },

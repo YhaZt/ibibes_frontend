@@ -755,7 +755,7 @@ const goToIncubatee = (id: number) => {
   setTimeout(() => {
     $q.loading.hide();
     const encodedId = btoa(String(id));
-    void router.push({ path: '/incubatee', query: { id: encodedId } });
+    void router.push({ path: '/incubateePage', query: { id: encodedId } });
   }, 2000);
 };
 </script>
