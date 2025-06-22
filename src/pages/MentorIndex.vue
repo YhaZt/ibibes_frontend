@@ -923,9 +923,9 @@ const goToMentor = (id: number) => {
 
 .custom-card {
   min-width: 280px;
-  min-height: 490px;
-  max-height: 490px;
-  height: 490px;
+  min-height: 530px;
+  max-height: 530px;
+  height: 530px;
   background: linear-gradient(90deg, #ffde59, #ff914d);
   display: flex;
   align-items: center;
@@ -1065,12 +1065,24 @@ const goToMentor = (id: number) => {
     font-size: 0.95em;
     padding: 8px;
   }
-  .a { order: 1; }
-  .d { order: 2; }
-  .b { order: 3; }
-  .c { order: 4; }
-  .e { order: 5; }
-  .f { order: 6; }
+  .a {
+    order: 1;
+  }
+  .d {
+    order: 2;
+  }
+  .b {
+    order: 3;
+  }
+  .c {
+    order: 4;
+  }
+  .e {
+    order: 5;
+  }
+  .f {
+    order: 6;
+  }
   .custom-card {
     min-width: auto;
     width: 100%;

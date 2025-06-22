@@ -11,7 +11,9 @@
     </div>
     <div class="q-pt-lg main-scale-container">
       <q-card-section class="row justify-center q-col-gutter-xs q-gutter-lg">
-        <q-card class="custom-card card-relative col-12 col-sm-6 col-md-4 col-lg-4 q-mb-lg cursor-pointer">
+        <q-card
+          class="custom-card card-relative col-12 col-sm-6 col-md-4 col-lg-4 q-mb-lg cursor-pointer"
+        >
           <div class="custom-quasar-grid q-pa-sm">
             <div class="cell a">
               <img
@@ -62,13 +64,7 @@
             </div>
           </div>
           <!-- Back Button -->
-          <q-btn
-            class="back-btn"
-            color="deep-orange"
-            round
-            icon="arrow_back"
-            @click="$router.back()"
-          />
+          <q-btn class="back-btn" color="deep-orange" round icon="arrow_back" @click="goBack" />
         </q-card>
       </q-card-section>
     </div>
@@ -111,6 +107,10 @@ const fetchMentor = async () => {
     void router.replace('/error-not-found');
   }
 };
+
+function goBack() {
+  router.back();
+}
 
 onMounted(() => {
   if (id) void fetchMentor();
@@ -255,8 +255,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .custom-card {
-
-  min-width: 50vw;
+    min-width: 50vw;
     background: linear-gradient(90deg, #ffde59, #ff914d);
     display: flex;
     align-items: center;
