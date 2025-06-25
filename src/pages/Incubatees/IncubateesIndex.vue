@@ -95,6 +95,25 @@
           </q-item>
         </q-list>
       </q-card>
+
+      <!-- <q-card class="q-mt-md">
+        <q-card-section class="bg-primary text-white text-center"> TEAM MEMBERS </q-card-section>
+        <q-list bordered separator>
+          <q-item v-for="(name, index) in incubatee.members" :key="index">
+            <q-item-section avatar>
+              <q-avatar size="40px">
+                <img
+                  :src="incubatee.memberPhotos?.[index] || 'https://cdn.quasar.dev/img/avatar.png'"
+                  alt="Profile"
+                />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ name }}</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-card> -->
     </div>
   </q-page>
 </template>

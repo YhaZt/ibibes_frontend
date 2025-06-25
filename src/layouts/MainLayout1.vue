@@ -40,6 +40,7 @@
       <router-view />
     </q-page-container>
   </q-layout>
+
 </template>
 
 <script setup lang="ts">
@@ -48,14 +49,10 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const showMenu = ref(false);
 const nav = [
-  { label: 'Home', to: 'https://minsuibibes.com/#home' },
-  { label: 'About', to: 'https://minsuibibes.com/#about' },
   { label: 'Program', to: 'https://minsuibibes.com/program', target: '_blank' },
-  { label: 'Events', to: 'https://minsuibibes.com/#events' },
-  { label: 'Contact Us', to: 'https://minsuibibes.com/#contacts' },
-  { label: 'News/ Announcements', to: 'https://minsuibibes.com/news', target: '_blank' },
-  { label: 'Incubatees', to: 'https://minsuibibes.com/page/incubatee' },
-  { label: 'Mentors', to: 'https://minsuibibes.com/page/mentor' },
+  { label: 'Incubatees', to: '/incubatee#/incubatee' },
+  { label: 'Mentors', to: '/mentor#/mentor' },
+  { label: 'Internal Mentors', to: '/internalMentor#/internalMentor' },
 ];
 type NavItem = {
   label: string;

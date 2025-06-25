@@ -55,7 +55,8 @@ const nav = [
   { label: 'Contact Us', to: 'https://minsuibibes.com/#contacts' },
   { label: 'News/ Announcements', to: 'https://minsuibibes.com/news', target: '_blank' },
   { label: 'Incubatees', to: 'https://minsuibibes.com/page/incubatee' },
-  { label: 'Mentors', to: 'https://minsuibibes.com/page/mentor' },
+  { label: 'Mentors', to: 'https://minsuibibes.com/page/mentor#/mentor' },
+  { label: 'Internal Mentors', to: 'https://minsuibibes.com/page/internalMentor#/internalMentor' },
 ];
 type NavItem = {
   label: string;

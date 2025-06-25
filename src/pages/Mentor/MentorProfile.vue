@@ -38,7 +38,7 @@
             </div>
             <div class="cell d">
               <div class="inner">
-                <div class="text-bold leading-tight break-words text-center">
+                <div class="text-bold text-h6 leading-tight break-words text-center">
                   {{ mentorData.mentor_name }}
                 </div>
                 <div class="text-subtitle2 text-warning">
