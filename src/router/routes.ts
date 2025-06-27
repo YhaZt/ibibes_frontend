@@ -11,6 +11,8 @@ const routes: RouteRecordRaw[] = [
       { path: 'mentorPage', component: () => import('pages/Mentor/MentorProfile.vue') },
       { path: 'incubateePage', component: () => import('pages/Incubatees/IncubateesIndex.vue') },
       { path: 'internalMentor', component: () => import('pages/Mentor/InternalMentor.vue') },
+      { path: 'add-news', component: () => import('pages/Admin/add-news.vue') },
+
     ],
   },
   {
