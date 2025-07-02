@@ -75,8 +75,12 @@ onUnmounted(() => window.removeEventListener('resize', handleResize));
 .navbar {
   background: #388e5a;
   color: #fff;
-  position: relative;
-  z-index: 10;
+  position: fixed; /* Make navbar sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px #0001;
 }
 .navbar-content {
   display: flex;
@@ -154,6 +158,12 @@ onUnmounted(() => window.removeEventListener('resize', handleResize));
 .slide-fade-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+.q-layout__section--marginal {
+  z-index: 1000;
+}
+.q-page-container {
+  padding-top: 64px; /* Adjust if your navbar is taller/shorter */
 }
 @media (max-width: 767px) {
   .nav-links {

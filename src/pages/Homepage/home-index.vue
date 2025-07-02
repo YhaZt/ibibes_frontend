@@ -6,7 +6,7 @@
       Your browser does not support HTML5 video.
     </video>
     <!-- Overlay -->
-    <div class="section-overlay"></div>.
+    <div class="section-overlay"></div>
     <!-- Main Content -->
     <div class="q-container hero-content">
       <div class="row q-col-gutter-xl">
@@ -32,7 +32,7 @@
           </div>
         </div>
         <!-- Right: SDG Images Grid -->
-        <div class="col-lg-6 col-12 flex flex-center">
+        <div class="col-lg-6 col-12 flex flex-center mobile-only">
           <div class="sdg-images-grid">
             <div
               class="sdg-image-container sdg8"
@@ -97,6 +97,57 @@
           </div>
         </div>
       </div>
+      <!-- Additional SDG Images Row -->
+      <div class="sdg-images-row desktop-only">
+        <div class="sdg-image-container sdg8">
+          <div class="sdg-card-inner">
+            <div class="sdg-card-front">
+              <q-img src="~/assets/sdg/SDG8.png" alt="SDG 8" class="sdg-image" />
+            </div>
+            <div class="sdg-card-back">
+              <div class="sdg-card-content">
+                SDG 8: Decent Work and Economic Growth: The MinSU i-BIBES TBI actively supports job creation through the incubation of innovative businesses that promotes sustainable practices. By equipping local technopreneurs with skills, resources, and networks, the initiative promotes inclusive and decent work opportunities. These efforts contribute to a thriving economic ecosystem, enhancing regional productivity and providing a pathway to sustained economic growth.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sdg-image-container sdg12">
+          <div class="sdg-card-inner">
+            <div class="sdg-card-front">
+              <q-img src="~/assets/sdg/SDG12.jpg" alt="SDG 12" class="sdg-image" />
+            </div>
+            <div class="sdg-card-back">
+              <div class="sdg-card-content">
+                SDG 12: Responsible Consumption and Production: MinSU i-BIBES integrates principles of sustainability into its incubation processes, emphasizing the importance of responsible production and consumption. By mentoring businesses to adopt eco-friendly practices and optimize resource use, the initiative ensures that goods and services are produced in a way that minimizes environmental impact. These efforts align with global goals for achieving sustainability and reducing waste throughout the value chain.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sdg-image-container sdg9">
+          <div class="sdg-card-inner">
+            <div class="sdg-card-front">
+              <q-img src="~/assets/sdg/SDG9.jpg" alt="SDG 9" class="sdg-image" />
+            </div>
+            <div class="sdg-card-back">
+              <div class="sdg-card-content">
+                SDG 9: Industry, Innovation, and Infrastructure: MinSU i-BIBES plays a critical role in the development of resilient infrastructure and technologies. The initiative supports startups and enterprises in creating modern, scalable solutions that address regional challenges. By facilitating access to advanced infrastructure and technological expertise, MinSU i-BIBES strengthens the foundation for sustainable industrialization and innovation-driven economic development.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sdg-image-container sdg17">
+          <div class="sdg-card-inner">
+            <div class="sdg-card-front">
+              <q-img src="~/assets/sdg/SDG17.jpg" alt="SDG 17" class="sdg-image" />
+            </div>
+            <div class="sdg-card-back">
+              <div class="sdg-card-content">
+                SDG 17: Partnerships for the Goals: Collaboration lies at the heart of the MinSU i-BIBES’ approach. By prioritizing cross-sectoral partnerships among the academe, industry, national government, and local governments, the initiative strengthens the means of implementation for sustainable development. These partnerships drive innovation, resource sharing, and the alignment of goals across diverse stakeholders, ensuring that the region advances together towards a more inclusive and prosperous future.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -108,25 +159,23 @@
 <style scoped>
 .hero-section {
   position: relative;
-  min-height: 70vh;
+  min-height: calc(100dvh - 64px); /* 64px is your navbar height */
+  height: calc(100dvh - 64px);
+  width: 100vw;
   overflow: hidden;
   background: #222;
+  display: flex;
+  align-items: stretch;
+  padding-top: 0;
 }
-.bg-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
-}
+.bg-video,
 .section-overlay {
   position: absolute;
   top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(34, 139, 87, 0.25);
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 .hero-svg {
   position: absolute;
@@ -137,13 +186,14 @@
 .hero-content {
   position: relative;
   z-index: 4;
-  padding-top: 7vh;
   padding-bottom: 7vh;
+  padding-top: 64px;
 }
 .cd-headline {
   font-size: 2.1rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 .cd-words-wrapper b {
   display: inline-block;
@@ -163,22 +213,32 @@
   border-radius: 8px;
   max-width: 260px;
   max-height: 30px;
+  margin-top: -8vh;
 }
 .sdg-images-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 18px;
-  margin-top: 20px;
-  width: 100%;
+  margin-top: -10vh;
+  width: 90%;
   max-width: 550px;
 }
+.sdg-images-row {
+  position: absolute;
+  right: 4vw;
+  bottom: 4vh;
+  display: flex;
+  gap: 24px;
+  z-index: 5;
+}
 .sdg-image-container {
+  width: 13vw;
+  aspect-ratio: 1/1;
   perspective: 900px;
   background: transparent;
   border-radius: 12px;
   cursor: pointer;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   box-shadow: 0 2px 8px #0001;
   transition: box-shadow 0.3s;
   position: relative;
@@ -194,7 +254,6 @@
   transition: transform 0.7s cubic-bezier(.4,2,.6,1);
   transform-style: preserve-3d;
   border-radius: 12px;
-  height: 100%;
 }
 .sdg-image-container:hover .sdg-card-inner {
   transform: rotateY(180deg);
@@ -276,13 +335,26 @@
   .cd-headline {
     font-size: 1.5rem;
   }
-  .sdg-images-grid {
+  .sdg-images-grid,
+  .sdg-images-row {
     grid-gap: 10px;
     max-width: 320px;
   }
   .sdg-card-content {
     font-size: 0.8rem;
     padding: 10px 6px;
+  }
+}
+@media (max-width: 900px) {
+  .sdg-images-row {
+    position: static;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .sdg-image-container {
+    width: 90px;
   }
 }
 @media (max-width: 600px) {
@@ -293,10 +365,20 @@
     padding-top: 2vh;
     padding-bottom: 2vh;
   }
-  .sdg-images-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
-    max-width: 98vw;
+  .sdg-images-grid,
+  .sdg-images-row {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .sdg-image-container {
+    width: 48vw;      /* was 44vw */
+    min-width: 140px; /* was 120px */
+    max-width: 200px; /* was 160px */
+    margin: 0;
   }
   .sdg-card-content {
     font-size: 0.7rem;

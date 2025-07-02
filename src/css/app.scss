@@ -2,3 +2,10 @@
 @import './quasar.variables.scss';
 
 @import './color.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
